@@ -10,7 +10,7 @@ $imageURL = $isURL ? $url : 'pub/media/' . $url;
 
 <div class="container-about m-5">
   <div class="item-about video">
-    <iframe src="https://www.youtube.com/embed/<?= $block->escapeHtml(
+    <iframe src="" data-src="https://www.youtube.com/embed/<?= $block->escapeHtml(
       $block->getData('video_id')
     ) ?>" frameborder='0' allowfullscreen>
     </iframe>
@@ -26,3 +26,15 @@ $imageURL = $isURL ? $url : 'pub/media/' . $url;
     </div>
   </div>
 </div>
+
+<script>
+  function init() {
+    var vidDefer = document.getElementsByTagName('iframe');
+    for (var i=0; i<vidDefer.length; i++) {
+      if(vidDefer[i].getAttribute('data-src')) {
+        vidDefer[i].setAttribute('src',vidDefer[i].getAttribute('data-src'));
+      }
+    }
+  }
+  window.onload = init;
+</script>
