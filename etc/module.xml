@@ -3,6 +3,6 @@
     <module name="Moonlay_CustomHome" setup_version="1.0.0" />
     <sequence>
         <module name="Magento_Widget" />
-        <module name="Magento_Catalog"/>
+        <module name="Magento_Catalog" />
     </sequence>
 </config>
