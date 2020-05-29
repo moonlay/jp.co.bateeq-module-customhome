@@ -1,8 +1,12 @@
 <div class="container-collection m-5">
     <div class="item-collection banner">
-        <img class="img-collection" src='<?php echo $this->getViewFileUrl(
+        <a href="<?= $block->escapeHtml(
+              $block->getData('men_url')
+            ) ?>">
+            <img class="img-collection" src='<?php echo $this->getViewFileUrl(
           'Moonlay_CustomHome::images/Home_Men.jpg'
         ); ?>' />
+        </a>
         <div class="collection">
             <a href="<?= $block->escapeHtml(
               $block->getData('men_url')
@@ -14,9 +18,13 @@
         </div>
     </div>
     <div class="item-collection banner">
-        <img class="img-collection" src='<?php echo $this->getViewFileUrl(
-          'Moonlay_CustomHome::images/Home_Women.jpg'
-        ); ?>' />
+        <a href="<?= $block->escapeHtml(
+              $block->getData('women_url')
+            ) ?>">
+            <img class="img-collection" src='<?php echo $this->getViewFileUrl(
+              'Moonlay_CustomHome::images/Home_Women.jpg'
+            ); ?>' />
+        </a>
         <div class="collection">
             <a href="<?= $block->escapeHtml(
               $block->getData('women_url')
