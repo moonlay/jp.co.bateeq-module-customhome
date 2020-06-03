@@ -1,11 +1,18 @@
+<?php
+$menURL = $block->escapeHtml($block->getData('men_img'));
+$isMenURL = strtolower(substr($menURL, 0, 4)) == 'http' ? true : false;
+$menImageURL = $isMenURL ? $menURL : 'pub/media/' . $menURL;
+
+$womenURL = $block->escapeHtml($block->getData('women_img'));
+$isWomenURL = strtolower(substr($womenURL, 0, 4)) == 'http' ? true : false;
+$womenImageURL = $isWomenURL ? $womenURL : 'pub/media/' . $womenURL;
+?>
 <div class="container-collection m-5">
     <div class="item-collection banner">
         <a href="<?= $block->escapeHtml(
               $block->getData('men_url')
             ) ?>">
-            <img class="img-collection" src='<?php echo $this->getViewFileUrl(
-          'Moonlay_CustomHome::images/Home_Men.jpg'
-        ); ?>' />
+            <img class="img-collection" src='<?= $menImageURL ?>' />
         </a>
         <div class="collection">
             <a href="<?= $block->escapeHtml(
@@ -21,9 +28,7 @@
         <a href="<?= $block->escapeHtml(
               $block->getData('women_url')
             ) ?>">
-            <img class="img-collection" src='<?php echo $this->getViewFileUrl(
-              'Moonlay_CustomHome::images/Home_Women.jpg'
-            ); ?>' />
+            <img class="img-collection" src='<?= $womenImageURL ?>' />
         </a>
         <div class="collection">
             <a href="<?= $block->escapeHtml(
