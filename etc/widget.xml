@@ -19,16 +19,38 @@
                 <label>URL for Men's Collection</label>
             </parameter>
 
-            <parameter name="women_jp" xsi:type="text" required="true" visible="true" sort_order="60">
+            <parameter xsi:type="block" name="men_img" required="true" visible="true" sort_order="60">
+                <label translate="true">Men Image</label>
+                <block class="Moonlay\CustomHome\WidgetParameters\Block\Adminhtml\Widget\Type\ImageChooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string">Choose Image...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+
+            <parameter name="women_jp" xsi:type="text" required="true" visible="true" sort_order="70">
                 <label>Japanese Title for Women</label>
             </parameter>
 
-            <parameter name="women_en" xsi:type="text" visible="true" sort_order="70">
+            <parameter name="women_en" xsi:type="text" visible="true" sort_order="80">
                 <label>English Title for Women</label>
             </parameter>
 
-            <parameter name="women_url" xsi:type="text" required="true" visible="true" sort_order="80">
+            <parameter name="women_url" xsi:type="text" required="true" visible="true" sort_order="90">
                 <label>URL for Women's Collection</label>
+            </parameter>
+
+            <parameter xsi:type="block" name="women_img" required="true" visible="true" sort_order="100">
+                <label translate="true">Women Image</label>
+                <block class="Moonlay\CustomHome\WidgetParameters\Block\Adminhtml\Widget\Type\ImageChooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string">Choose Image...</item>
+                        </item>
+                    </data>
+                </block>
             </parameter>
 		</parameters>
 	</widget>
