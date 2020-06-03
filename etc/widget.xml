@@ -7,11 +7,11 @@
             A widget to show product collections
         </description>
 		<parameters>
-            <parameter name="men_jp" xsi:type="text" visible="true" sort_order="30">
+            <parameter name="men_jp" xsi:type="text" required="true" visible="true" sort_order="30">
                 <label>Japanese Title for Men</label>
             </parameter>
 
-            <parameter name="men_en" xsi:type="text" required="true" visible="true" sort_order="40">
+            <parameter name="men_en" xsi:type="text" visible="true" sort_order="40">
                 <label>English Title for Men</label>
             </parameter>
 
@@ -19,11 +19,11 @@
                 <label>URL for Men's Collection</label>
             </parameter>
 
-            <parameter name="women_jp" xsi:type="text" visible="true" sort_order="60">
+            <parameter name="women_jp" xsi:type="text" required="true" visible="true" sort_order="60">
                 <label>Japanese Title for Women</label>
             </parameter>
 
-            <parameter name="women_en" xsi:type="text" required="true" visible="true" sort_order="70">
+            <parameter name="women_en" xsi:type="text" visible="true" sort_order="70">
                 <label>English Title for Women</label>
             </parameter>
 
@@ -79,11 +79,11 @@
             A widget to show a title
         </description>
 		<parameters>
-			<parameter name="title_jp" xsi:type="text" visible="true" sort_order="10">
+			<parameter name="title_jp" xsi:type="text" required="true" visible="true" sort_order="10">
                 <label>Japanese Title</label>
             </parameter>
 
-            <parameter name="title_en" xsi:type="text" required="true" visible="true" sort_order="20">
+            <parameter name="title_en" xsi:type="text" visible="true" sort_order="20">
                 <label>English Title</label>
             </parameter>
 		</parameters>
