@@ -56,13 +56,12 @@ define([
             if ($(this.options.changeEmailSelector).is(':checked') &&
                 $(this.options.changePasswordSelector).is(':checked')) {
                 this._showAll();
-                console.log('semua');
             } else if ($(this.options.changeEmailSelector).is(':checked')) {
-                this._showEmail();
-                console.log('email');
+                // this._showEmail();
+                this._showAll();
             } else if ($(this.options.changePasswordSelector).is(':checked')) {
-                this._showPassword();
-                console.log('password');
+                // this._showPassword();
+                this._showAll();
             } else {
                 // this._hideAll();
                 this._showAll();
