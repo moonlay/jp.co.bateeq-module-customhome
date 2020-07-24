@@ -25,9 +25,9 @@ class LayoutProcessor
                 'shippingAddress',
                 [
                     'checkoutProvider',
+                    'checkout.steps.shipping-step.shippingAddress.shipping-address-fieldset.region_id',
                     'checkout.steps.shipping-step.shippingAddress.shipping-address-fieldset.city',
                     'checkout.steps.shipping-step.shippingAddress.shipping-address-fieldset.street',
-                    'checkout.steps.shipping-step.shippingAddress.shipping-address-fieldset.region_id',
                     'checkout.steps.shipping-step.shippingAddress.shipping-address-fieldset.country_id'
                 ]
             );
@@ -47,9 +47,9 @@ class LayoutProcessor
                     $billingForm['dataScopePrefix'],
                     [
                         'checkoutProvider',
+                        'checkout.steps.billing-step.payment.payments-list.' . $key . '.form-fields.region_id',
                         'checkout.steps.billing-step.payment.payments-list.' . $key . '.form-fields.city',
                         'checkout.steps.billing-step.payment.payments-list.' . $key . '.form-fields.street',
-                        'checkout.steps.billing-step.payment.payments-list.' . $key . '.form-fields.region_id',
                         'checkout.steps.billing-step.payment.payments-list.' . $key . '.form-fields.country_id'
                     ]
                 );
@@ -82,7 +82,7 @@ class LayoutProcessor
             'label' => __('郵便番号'),
             'provider' => 'checkoutProvider',
             'visible' => true,
-            'sortOrder' => 71,
+            'sortOrder' => 110,
             'validation' => [
                'required-entry' => true
             ],
