@@ -21,7 +21,7 @@ class LayoutProcessor
       'shipping-step'
     ]['children']['shippingAddress']['children']['shipping-address-fieldset'][
       'children'
-    ]['street']['sortOrder'] = 74;
+    ]['street']['sortOrder'] = 114;
 
     return $jsLayout;
   }
