@@ -7,10 +7,9 @@ define([
   return AbstractField.extend({
       defaults: {
           modules: {
+            region: '${ $.parentName }.region_id',
             city: '${ $.parentName }.city',
-            street: '${ $.parentName }.street',
-            // region: '${ $.parentName }.region_id',
-            // region: document.querySelector('[name=region]')
+            // street: '${ $.parentName }.street',
           }
       },
 
@@ -25,20 +24,17 @@ define([
                 return Promise.reject(response);
               })
               .then(data => {
+                const regionValue = data[0].hasOwnProperty(this.value()) && data[0][this.value()][0];
                 const cityValue = data[0].hasOwnProperty(this.value()) ? data[0][this.value()][1] : '';
-                const streetValue = data[0].hasOwnProperty(this.value()) ? data[0][this.value()][2] : '';
-                // const regionValue = data[0].hasOwnProperty(this.value()) ? data[0][this.value()][1] : '';
+                // const streetValue = data[0].hasOwnProperty(this.value()) ? data[0][this.value()][2] : '';
+                this.region().value(parseInt(regionValue));
                 this.city().value(cityValue);
-                this.street().elems()[0].set('value', streetValue);
-                // this.region().value(regionValue);
-                // const rg = document.querySelector('[name=region]');
-                // rg.value = regionValue;
+                // this.street().elems()[0].set('value', streetValue);
               })
               .catch(error => console.warn(error))
           } else {
             this.city().value('');
-            this.street().elems()[0].set('value', '');
-            // this.region().value('');
+            // this.street().elems()[0].set('value', '');
           }
       },
 
