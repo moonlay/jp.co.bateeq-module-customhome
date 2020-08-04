@@ -60,9 +60,9 @@ define([
           .catch(error => console.warn(error))
       } else {
         // Clean fields
-        if (this.value() !== '') {
-          this.region().value('');
-        }
+        // if (this.value() !== '') {
+        //   this.region().value('');
+        // }
         this.city().value('');
         // this.street().elems()[0].set('value', '');
       }
